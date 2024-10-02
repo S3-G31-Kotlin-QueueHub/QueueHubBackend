@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+psycopg
+sqlalchemy
+pydantic
+typing
+pytest
+httpx
+pytest-asyncio
+pytest-mock
+pytest-cov
+faker
+coverage
