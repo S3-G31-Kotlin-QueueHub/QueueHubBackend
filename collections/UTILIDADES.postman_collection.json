@@ -1,0 +1,269 @@
+{
+	"info": {
+		"_postman_id": "e6eedcd4-01ae-4b82-bbba-4be9c680f81a",
+		"name": "UTILIDADES",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23292417"
+	},
+	"item": [
+		{
+			"name": "User DB Reset",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/users/reset",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"reset"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREACION DE USUARIOS",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "30416a0a-5dad-4ea5-a2ef-5ccda11dded8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"Nicolas06\",\n  \"password\": \"password\",\n  \"email\": \"nicoastri@gmail.com\",\n  \"fullName\": \"Nicolas Andres\",\n  \"phoneNumber\": \"3529814677\"\n  \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREACION DE RESTAURANTES",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"idFranquicia\": \"franquicia_123\",\n    \"nombre\": \"Sede Central\",\n    \"direccion\": \"Avenida Principal 123, Ciudad\",\n    \"telefono\": 123456789,\n    \"latitud\": -34.6037,\n    \"longitud\": -58.3816\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/restaurants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"restaurants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREACION DE COLA",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/restaurant/61028d10-2418-4346-b7b3-a3e1dd8ca97b/cola",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"restaurant",
+						"61028d10-2418-4346-b7b3-a3e1dd8ca97b",
+						"cola"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AÑADIR USUARIO A COLA",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/cola/dae63189-47f4-4cb3-aacf-0f0b68adf6e9/user/daabe633-2bb0-4741-9ec5-43b21241ff11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"cola",
+						"dae63189-47f4-4cb3-aacf-0f0b68adf6e9",
+						"user",
+						"daabe633-2bb0-4741-9ec5-43b21241ff11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FINALIZAR COLA POR USUARIO",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/cola/dae63189-47f4-4cb3-aacf-0f0b68adf6e9/user/daabe633-2bb0-4741-9ec5-43b21241ff11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"cola",
+						"dae63189-47f4-4cb3-aacf-0f0b68adf6e9",
+						"user",
+						"daabe633-2bb0-4741-9ec5-43b21241ff11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GENERACION DE TOKEN",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"nicoastri@gmail.com\",\n  \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/users/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OBTENER INFORMACION DE USUARIO",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"token\": \"b2ec0eb4-46cf-4bfa-b87e-a63fa5cb8909\" \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/users/me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"me"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

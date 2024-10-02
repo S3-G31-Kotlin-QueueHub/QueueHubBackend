@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "e58f6851-d7dc-4588-a97a-5ffc9893f226",
+		"name": "AñadirUsuariosACola",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23292417"
+	},
+	"item": [
+		{
+			"name": "CREACION DE USUARIOS Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// Generar un UUID",
+							"pm.globals.set(\"randomId\", pm.variables.replaceIn(\"{{$guid}}\"));",
+							"",
+							"// Generar username aleatorio",
+							"const randomUsername = `user${Math.floor(Math.random() * 10000)}`;",
+							"pm.globals.set(\"randomUsername\", randomUsername);",
+							"",
+							"// Generar email aleatorio",
+							"const randomEmail = `user${Math.floor(Math.random() * 10000)}@example.com`;",
+							"pm.globals.set(\"randomEmail\", randomEmail);",
+							"",
+							"// Generar número de teléfono aleatorio",
+							"const randomPhone = `3${Math.floor(100000000 + Math.random() * 900000000)}`;",
+							"pm.globals.set(\"randomPhone\", randomPhone);",
+							"",
+							"// Generar nombre completo aleatorio",
+							"const firstNames = [\"Nicolas\", \"Juan\", \"Carlos\", \"Miguel\", \"Luis\"];",
+							"const lastNames = [\"Perez\", \"Gomez\", \"Rodriguez\", \"Lopez\", \"Martinez\"];",
+							"const randomFullName = `${firstNames[Math.floor(Math.random() * firstNames.length)]} ${lastNames[Math.floor(Math.random() * lastNames.length)]}`;",
+							"pm.globals.set(\"randomFullName\", randomFullName);",
+							"",
+							"// Generar hash de contraseña aleatoria (32 caracteres)",
+							"const chars = \"abcdef0123456789\";",
+							"let randomPassword = \"\";",
+							"for (let i = 0; i < 64; i++) {",
+							"  randomPassword += chars.charAt(Math.floor(Math.random() * chars.length));",
+							"}",
+							"pm.globals.set(\"randomPassword\", randomPassword);",
+							"",
+							"// Variables para las fechas (horaInicio debe ser menor que horaFin)",
+							"const now = new Date();",
+							"const oneHourLater = new Date(now.getTime() + 60 * 60 * 1000);",
+							"pm.globals.set(\"horaInicio\", now.toISOString());",
+							"pm.globals.set(\"horaFin\", oneHourLater.toISOString());",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "30416a0a-5dad-4ea5-a2ef-5ccda11dded8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"{{randomId}}\",\n  \"username\": \"{{randomUsername}}\",\n  \"email\": \"{{randomEmail}}\",\n  \"phoneNumber\": \"{{randomPhone}}\",\n  \"fullName\": \"{{randomFullName}}\",\n  \"password\": \"{{randomPassword}}\",\n  \"salt\": \"Nii\",\n  \"token\": \"temp\",\n  \"expireAt\": \"2024-10-02T15:56:54.492131\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CRACION DE TURNO",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/cola/{{ColaID}}/user/{{randomId}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"cola",
+						"{{ColaID}}",
+						"user",
+						"{{randomId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREACION DE RESTAURANTES Copy 3",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/cola/{{ColaID}}/user/{{randomId}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"cola",
+						"{{ColaID}}",
+						"user",
+						"{{randomId}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

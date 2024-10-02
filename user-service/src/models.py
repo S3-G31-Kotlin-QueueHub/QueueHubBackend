@@ -66,7 +66,7 @@ turnos = Table (
     Column("id", UUID(as_uuid=True), primary_key=True,
            default=uuid.uuid4, index=True),
     Column("idCliente", UUID(as_uuid=True), nullable=False,
-           index=True, unique=True),
+           index=True),
     Column("idCola", UUID(as_uuid=True), nullable=False),
     Column("horaInicio", DateTime(), nullable=True),
     Column("horaFin", DateTime(), nullable=True),

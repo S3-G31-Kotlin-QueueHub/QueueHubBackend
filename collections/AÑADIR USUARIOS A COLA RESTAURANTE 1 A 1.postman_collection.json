@@ -1,0 +1,280 @@
+{
+	"info": {
+		"_postman_id": "7fa651be-e65a-4c55-8f55-8050d6d29425",
+		"name": "AÑADIR USUARIOS A COLA RESTAURANTE 1 A 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23292417"
+	},
+	"item": [
+		{
+			"name": "CREACION DE USUARIOS Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// Generar un UUID",
+							"pm.globals.set(\"randomId\", pm.variables.replaceIn(\"{{$guid}}\"));",
+							"",
+							"// Generar username aleatorio",
+							"const randomUsername = `user${Math.floor(Math.random() * 10000)}`;",
+							"pm.globals.set(\"randomUsername\", randomUsername);",
+							"",
+							"// Generar email aleatorio",
+							"const randomEmail = `user${Math.floor(Math.random() * 10000)}@example.com`;",
+							"pm.globals.set(\"randomEmail\", randomEmail);",
+							"",
+							"// Generar número de teléfono aleatorio",
+							"const randomPhone = `3${Math.floor(100000000 + Math.random() * 900000000)}`;",
+							"pm.globals.set(\"randomPhone\", randomPhone);",
+							"",
+							"// Generar nombre completo aleatorio",
+							"const firstNames = [\"Nicolas\", \"Juan\", \"Carlos\", \"Miguel\", \"Luis\"];",
+							"const lastNames = [\"Perez\", \"Gomez\", \"Rodriguez\", \"Lopez\", \"Martinez\"];",
+							"const randomFullName = `${firstNames[Math.floor(Math.random() * firstNames.length)]} ${lastNames[Math.floor(Math.random() * lastNames.length)]}`;",
+							"pm.globals.set(\"randomFullName\", randomFullName);",
+							"",
+							"// Generar hash de contraseña aleatoria (32 caracteres)",
+							"const chars = \"abcdef0123456789\";",
+							"let randomPassword = \"\";",
+							"for (let i = 0; i < 64; i++) {",
+							"  randomPassword += chars.charAt(Math.floor(Math.random() * chars.length));",
+							"}",
+							"pm.globals.set(\"randomPassword\", randomPassword);",
+							"",
+							"// Variables para las fechas (horaInicio debe ser menor que horaFin)",
+							"const now = new Date();",
+							"const oneHourLater = new Date(now.getTime() + 60 * 60 * 1000);",
+							"pm.globals.set(\"horaInicio\", now.toISOString());",
+							"pm.globals.set(\"horaFin\", oneHourLater.toISOString());",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "30416a0a-5dad-4ea5-a2ef-5ccda11dded8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"{{randomId}}\",\n  \"username\": \"{{randomUsername}}\",\n  \"email\": \"{{randomEmail}}\",\n  \"phoneNumber\": \"{{randomPhone}}\",\n  \"fullName\": \"{{randomFullName}}\",\n  \"password\": \"{{randomPassword}}\",\n  \"salt\": \"Nii\",\n  \"token\": \"temp\",\n  \"expireAt\": \"2024-10-02T15:56:54.492131\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREACION DE RESTAURANTES",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// Generar un UUID para el ID",
+							"pm.globals.set(\"randomIdR\", pm.variables.replaceIn(\"{{$guid}}\"));",
+							"",
+							"// Generar id de franquicia aleatoria",
+							"const randomIdFranquicia = `franquicia_${Math.floor(Math.random() * 1000)}`;",
+							"pm.globals.set(\"randomIdFranquicia\", randomIdFranquicia);",
+							"",
+							"// Generar nombre de sede aleatorio",
+							"const firstNames = [\"SEDE\", \"EDIFICIO\", \"CASA\", \"RESTAURANTE\", \"ALMUERZO\",'sede', 'Andre'];",
+							"const lastNames = [\"Comida\", \"Central\", \"Norte\", \"Sur\", \"Oriente\",\"Oriente\", \"Occidente, 'Patroclo\"];",
+							"const randomFullName = `${firstNames[Math.floor(Math.random() * firstNames.length)]} ${lastNames[Math.floor(Math.random() * lastNames.length)]}`;",
+							"pm.globals.set(\"randomNombre\", randomFullName);",
+							"",
+							"// Generar dirección aleatoria",
+							"const streets = [\"Avenida Principal\", \"Calle Secundaria\", \"Paseo de la Reforma\", \"Carrera 7ma\"];",
+							"const randomStreet = streets[Math.floor(Math.random() * streets.length)];",
+							"const randomDireccion = `${randomStreet} ${Math.floor(Math.random() * 1000)}, Ciudad`;",
+							"pm.globals.set(\"randomDireccion\", randomDireccion);",
+							"",
+							"// Generar teléfono aleatorio",
+							"const randomTelefono = Math.floor(100000000 + Math.random() * 900000000);",
+							"pm.globals.set(\"randomTelefono\", randomTelefono);",
+							"",
+							"// Generar latitud y longitud aleatorias (basadas en coordenadas de Buenos Aires)",
+							"const randomLatitud = (-34.6037 + (Math.random() * 0.1 - 0.05)).toFixed(6);",
+							"const randomLongitud = (-58.3816 + (Math.random() * 0.1 - 0.05)).toFixed(6);",
+							"pm.globals.set(\"randomLatitud\", randomLatitud);",
+							"pm.globals.set(\"randomLongitud\", randomLongitud);",
+							"",
+							"// Generar URL de imagen aleatoria",
+							"const randomUrlImg = `/restaurants/${randomFullName.replace(/ /g, \"\")}/photo/icon`;",
+							"pm.globals.set(\"randomUrlImg\", randomUrlImg);",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"{{randomIdR}}\",\n  \"idFranquicia\": \"{{randomIdFranquicia}}\",\n  \"nombre\": \"{{randomNombre}}\",\n  \"direccion\": \"{{randomDireccion}}\",\n  \"telefono\": \"{{randomTelefono}}\",\n  \"latitud\": \"{{randomLatitud}}\",\n  \"longitud\": \"{{randomLongitud}}\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/restaurants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"restaurants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREACION DE COLA",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let responseData = pm.response.json(); ",
+							"if (responseData.id) {",
+							"    pm.globals.set(\"ColaID\", responseData.id);",
+							"    console.log(\"ID guardado en la variable ColaID:\", responseData.id);",
+							"} else {",
+							"    console.log(\"No se encontró el campo 'id' en la respuesta.\");",
+							"}"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/restaurant/{{randomIdR}}/cola",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"restaurant",
+						"{{randomIdR}}",
+						"cola"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CRACION DE TURNO",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/cola/{{ColaID}}/user/{{randomId}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"cola",
+						"{{ColaID}}",
+						"user",
+						"{{randomId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FINALIZAR TURNO",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/cola/{{ColaID}}/user/{{randomId}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"cola",
+						"{{ColaID}}",
+						"user",
+						"{{randomId}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

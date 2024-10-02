@@ -376,23 +376,24 @@ def getShortestHour():
                         
             values = getRestByCola(res[2])
             sede_data = {
-            'id': values[0],         
-            'idFranquicia': values[1], 
-            'nombre': values[2],      
-            'direccion': values[4],   
-            'telefono':     values[3], 
-            'latitud': values[5],      
-            'longitud': values[6],     
-            'urlImg': values[7],   
-            'averageWaitingTime' : response_dict [res[2]]['waitingTimeSum']/response_dict [res[2]]['cont'],
-            'averageWaitingTimeLastHour' : response_dict [res[2]]['waitingTimeSumLastHour']/response_dict [res[2]]['contLastHour'],
-            'cont' : response_dict [res[2]]['cont'],
-            'contLastHour' : response_dict [res[2]]['contLastHour'],
-            'betterTime' : time_ranges
-            }
+    'id': str(values[0]),         
+    'idFranquicia': str(values[1]), 
+    'nombre': str(values[2]),      
+    'direccion': str(values[4]),   
+    'telefono': str(values[3]), 
+    'latitud': str(values[5]),      
+    'longitud': str(values[6]),     
+    'urlImg': str(values[7]),   
+    'averageWaitingTime': str(response_dict[res[2]]['waitingTimeSum'] / response_dict[res[2]]['cont']),
+    'averageWaitingTimeLastHour': str(response_dict[res[2]]['waitingTimeSumLastHour'] / response_dict[res[2]]['contLastHour']),
+    'cont': str(response_dict[res[2]]['cont']),
+    'contLastHour': str(response_dict[res[2]]['contLastHour']),
+    'betterTime': time_ranges  # Este valor queda como su tipo original
+}
+
             results[values[0]]= sede_data
 
-        return  results
+        return  list(results.values())
     
 def getRestByCola(colaId):
     colaId
@@ -408,3 +409,66 @@ def getRestColas():
         cola  = c.execute(resColas.select()).all()
         
         return cola
+    
+
+
+@app.get("/places/common-by-user/{idCliente}")
+def getCommon(idCliente):
+    results = {}
+    with engine.connect() as c:
+        response_dict = {
+
+        }
+        result = c.execute(turnos.select().where(turnos.c.status == 'FINALIZADA', turnos.c.idCliente == idCliente )).all()
+        for res in result:
+
+            response_dict [res[2]]  = response_dict.get(res[2], {'cont':0, 'contLastHour':0, 'waitingTimeSum':0, 'waitingTimeSumLastHour':0,  '6am-12pm':0  , '12pm-4pm':0  , '4pm-7pm':0  , '7pm-12am': 0 }) 
+            if res[4]> datetime.now() - timedelta(minutes=60):
+                response_dict [res[2]]['contLastHour']  = response_dict [res[2]]['contLastHour'] +1
+                response_dict [res[2]]['waitingTimeSumLastHour']  = response_dict [res[2]]['waitingTimeSumLastHour'] + res[-3]
+            response_dict [res[2]]['cont']  = response_dict [res[2]]['cont'] +1
+            response_dict [res[2]]['waitingTimeSum']  = response_dict [res[2]]['waitingTimeSum'] + res[-3]
+            if response_dict [res[2]]['contLastHour'] <=0:
+                response_dict [res[2]]['contLastHour'] = 1
+            
+                response_dict [res[2]]['waitingTimeSumLastHour'] = 5
+            if response_dict [res[2]]['cont'] <=0:
+                response_dict [res[2]]['cont'] = 1
+                response_dict [res[2]]['waitingTimeSum'] = 5
+            fecha = res[4]
+            morning = datetime.strptime("6:00", "%H:%M").time()
+            midday = datetime.strptime("12:00", "%H:%M").time()
+            afternoon = datetime.strptime("16:00", "%H:%M").time()
+            evening = datetime.strptime("19:00", "%H:%M").time()
+            if morning <= fecha.time() <= midday:
+               response_dict [res[2]]['6am-12pm']=response_dict [res[2]]['6am-12pm'] +1
+            elif midday < fecha.time() <= afternoon:
+                response_dict [res[2]]['12pm-4pm'] =response_dict [res[2]]['12pm-4pm'] +1
+            elif afternoon < fecha.time() <= evening:
+                response_dict [res[2]]['4pm-7pm']= response_dict [res[2]]['4pm-7pm'] +1
+            elif evening < fecha.time() :
+                response_dict [res[2]]['7pm-12am']=response_dict [res[2]]['7pm-12am'] +1
+            time_ranges = {key: response_dict[res[2]][key] for key in ['6am-12pm', '12pm-4pm', '4pm-7pm', '7pm-12am']}
+
+            maximun = min(time_ranges, key=time_ranges.get)
+                        
+            values = getRestByCola(res[2])
+            sede_data = {
+    'id': str(values[0]),         
+    'idFranquicia': str(values[1]), 
+    'nombre': str(values[2]),      
+    'direccion': str(values[4]),   
+    'telefono': str(values[3]), 
+    'latitud': str(values[5]),      
+    'longitud': str(values[6]),     
+    'urlImg': str(values[7]),   
+    'averageWaitingTime': str(response_dict[res[2]]['waitingTimeSum'] / response_dict[res[2]]['cont']),
+    'averageWaitingTimeLastHour': str(response_dict[res[2]]['waitingTimeSumLastHour'] / response_dict[res[2]]['contLastHour']),
+    'cont': str(response_dict[res[2]]['cont']),
+    'contLastHour': str(response_dict[res[2]]['contLastHour']),
+    'betterTime': time_ranges  # Este valor queda como su tipo original
+}
+
+            results[values[0]]= sede_data
+
+        return  list(results.values())
