@@ -388,7 +388,7 @@ def getShortestHour():
     'averageWaitingTimeLastHour': str(response_dict[res[2]]['waitingTimeSumLastHour'] / response_dict[res[2]]['contLastHour']),
     'cont': str(response_dict[res[2]]['cont']),
     'contLastHour': str(response_dict[res[2]]['contLastHour']),
-    'betterTime': time_ranges  # Este valor queda como su tipo original
+    'betterTime': maximun
 }
 
             results[values[0]]= sede_data
