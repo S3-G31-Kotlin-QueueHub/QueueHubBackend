@@ -55,7 +55,7 @@ def updateDB():
     proccess_t = proccess_turn(turns, mapper)
     proccess_p =process_restaurants(places, turns, mapper)
     save_json(proccess_t, "user_behavior")
-    save_json(proccess_t, "place_efficience")
+    save_json(proccess_p, "place_efficience")
     return {'msg' : "SE HAN GENERADO DATOS DE ANALITICA"}
     
 
