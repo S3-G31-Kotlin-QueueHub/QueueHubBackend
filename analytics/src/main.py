@@ -1,6 +1,9 @@
 from fastapi import FastAPI, HTTPException, status, Depends, Header
 from sqlalchemy import create_engine, text
 from datetime import datetime, timedelta
+from fastapi import APIRouter, HTTPException
+from fastapi.responses import FileResponse
+import os
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.exc import IntegrityError
 from hashlib import sha256
@@ -130,5 +133,21 @@ def save_json(data, filename):
     file_path = os.path.join(directory, f"{filename}.json")
     
     with open(file_path, 'w') as json_file:
-        json.dump(data, json_file, indent=4)  # `indent=4` para que el JSON sea legible
+        json.dump(data, json_file, indent=4)  
 
+@app.get('/users_insights')
+def get_behavior():
+    file_path = './jsons/user_behavior.json'
+    
+    if not os.path.exists(file_path):
+        raise HTTPException(status_code=404, detail="File not found")
+    
+    return FileResponse(file_path, media_type='application/json', filename="user_behavior.json")
+@app.get('/place_insights')
+def get_behavior():
+    file_path = './jsons/place_efficience.json'
+    
+    if not os.path.exists(file_path):
+        raise HTTPException(status_code=404, detail="File not found")
+    
+    return FileResponse(file_path, media_type='application/json', filename="user_behavior.json")
