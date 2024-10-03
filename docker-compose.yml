@@ -28,6 +28,22 @@ services:
       - postgres_data:/var/lib/postgresql/data 
     networks:
       - user_net
+  analytics:
+    build:
+      context: ./analytics
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app:cached
+    ports:
+      - "8001:8000"
+    environment: 
+      - user_name=Estudiante
+      - write_result=not_show
+    networks:
+      - user_net
+
+
+  
   
 volumes:
   users-data:
@@ -36,3 +52,4 @@ volumes:
 networks:
   user_net:   
     driver: bridge 
+  

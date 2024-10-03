@@ -1,0 +1,681 @@
+[
+    {
+        "client": "c27071eb-16ce-4a56-9944-387be7779f9f",
+        "restaurant": "RESTAURANTE Oriente",
+        "latitud": -34.55825,
+        "longitud": -58.369433,
+        "duration": 0.0
+    },
+    {
+        "client": "53458b84-5162-4901-b9cc-8b94b3c17a74",
+        "restaurant": "SEDE Oriente",
+        "latitud": -34.560902,
+        "longitud": -58.396306,
+        "duration": 0.0
+    },
+    {
+        "client": "fb78033a-136f-436a-812b-458d3f6b0de5",
+        "restaurant": "SEDE Oriente",
+        "latitud": -34.560902,
+        "longitud": -58.396306,
+        "duration": 0.0
+    },
+    {
+        "client": "6ee4154e-44c9-421d-a1ef-6e1d615487e3",
+        "restaurant": "CASA Central",
+        "latitud": -34.57131,
+        "longitud": -58.367166,
+        "duration": 0.0
+    },
+    {
+        "client": "b653fc97-584d-4e45-a169-ae03899f7b9f",
+        "restaurant": "ALMUERZO Sur",
+        "latitud": -34.607859,
+        "longitud": -58.397768,
+        "duration": 0.0
+    },
+    {
+        "client": "29e4b0d1-13ae-4cc9-85a1-eeddeece686a",
+        "restaurant": "sede Sur",
+        "latitud": -34.595014,
+        "longitud": -58.342246,
+        "duration": 0.0
+    },
+    {
+        "client": "159f1676-ce1d-4d79-b009-eaa9f1e49a51",
+        "restaurant": "Andre Occidente, 'Patroclo",
+        "latitud": -34.566397,
+        "longitud": -58.374432,
+        "duration": 0.0
+    },
+    {
+        "client": "1e55beef-ed56-458c-bd72-6c026f1256e5",
+        "restaurant": "ALMUERZO Oriente",
+        "latitud": -34.640695,
+        "longitud": -58.404507,
+        "duration": 0.0
+    },
+    {
+        "client": "70010a69-12b7-4ea0-b704-b5b09a52acfa",
+        "restaurant": "RESTAURANTE Central",
+        "latitud": -34.644803,
+        "longitud": -58.408326,
+        "duration": 0.0
+    },
+    {
+        "client": "6d30c3c5-3d35-4bb8-9a24-4bbd8735ee39",
+        "restaurant": "EDIFICIO Sur",
+        "latitud": -34.56392,
+        "longitud": -58.373199,
+        "duration": 0.0
+    },
+    {
+        "client": "09c0f64b-4fe1-48ae-8f31-b60600eeaf63",
+        "restaurant": "RESTAURANTE Norte",
+        "latitud": -34.63062,
+        "longitud": -58.339263,
+        "duration": 0.0
+    },
+    {
+        "client": "4f9ec2c8-e7ae-41f3-9092-b595c1835ccb",
+        "restaurant": "SEDE Norte",
+        "latitud": -34.600052,
+        "longitud": -58.34589,
+        "duration": 0.0
+    },
+    {
+        "client": "47d34896-147f-4535-8fd3-26f8b15ee545",
+        "restaurant": "Andre Oriente",
+        "latitud": -34.632114,
+        "longitud": -58.420002,
+        "duration": 0.0
+    },
+    {
+        "client": "036696c9-d65f-4e93-ad2b-30a620a26ca1",
+        "restaurant": "Andre Oriente",
+        "latitud": -34.632114,
+        "longitud": -58.420002,
+        "duration": 0.0
+    },
+    {
+        "client": "d9fb32d1-07df-4485-8242-2b09bb4f84ae",
+        "restaurant": "EDIFICIO Central",
+        "latitud": -34.567212,
+        "longitud": -58.384301,
+        "duration": 0.0
+    },
+    {
+        "client": "46be07a8-8e30-422d-9d35-858fd1894017",
+        "restaurant": "EDIFICIO Central",
+        "latitud": -34.567212,
+        "longitud": -58.384301,
+        "duration": 0.0
+    },
+    {
+        "client": "b14876fe-012d-4003-87f9-8dacbe7363f0",
+        "restaurant": "RESTAURANTE Occidente, 'Patroclo",
+        "latitud": -34.613127,
+        "longitud": -58.371829,
+        "duration": 0.0
+    },
+    {
+        "client": "f2314ea7-a8ed-4c05-a0a7-c826e5d98733",
+        "restaurant": "SEDE Central",
+        "latitud": -34.605738,
+        "longitud": -58.398564,
+        "duration": 0.0
+    },
+    {
+        "client": "11b6174f-08e6-4179-8ea6-a507d040ca0b",
+        "restaurant": "ALMUERZO Norte",
+        "latitud": -34.580247,
+        "longitud": -58.3681,
+        "duration": 0.0
+    },
+    {
+        "client": "c029d4a4-fdd2-439e-a1ee-e6dccfe29e9b",
+        "restaurant": "ALMUERZO Norte",
+        "latitud": -34.580247,
+        "longitud": -58.3681,
+        "duration": 0.0
+    },
+    {
+        "client": "2348500d-59b0-47e5-9a16-4b7d22b939bc",
+        "restaurant": "ALMUERZO Norte",
+        "latitud": -34.580247,
+        "longitud": -58.3681,
+        "duration": 0.0
+    },
+    {
+        "client": "ff15d44d-71af-4860-b737-c81f71b0969d",
+        "restaurant": "SEDE Comida",
+        "latitud": -34.583636,
+        "longitud": -58.391275,
+        "duration": 0.0
+    },
+    {
+        "client": "33e909c7-b629-4a7e-9699-4560d69e2ad5",
+        "restaurant": "sede Occidente, 'Patroclo",
+        "latitud": -34.555471,
+        "longitud": -58.358763,
+        "duration": 0.0
+    },
+    {
+        "client": "d89f26e8-bdff-4e04-b3d7-4e3d2689691e",
+        "restaurant": "sede Occidente, 'Patroclo",
+        "latitud": -34.555471,
+        "longitud": -58.358763,
+        "duration": 0.0
+    },
+    {
+        "client": "c9f7d2d7-8ca1-4e2f-aeaa-38b10cd5d271",
+        "restaurant": "sede Occidente, 'Patroclo",
+        "latitud": -34.555471,
+        "longitud": -58.358763,
+        "duration": 0.0
+    },
+    {
+        "client": "00b08e08-7f8f-497a-8aff-7d7ea74eb74e",
+        "restaurant": "sede Occidente, 'Patroclo",
+        "latitud": -34.555471,
+        "longitud": -58.358763,
+        "duration": 0.0
+    },
+    {
+        "client": "42bcdbf9-4500-41ff-a86c-97852a92ccbc",
+        "restaurant": "RESTAURANTE Comida",
+        "latitud": -34.553744,
+        "longitud": -58.342806,
+        "duration": 0.0
+    },
+    {
+        "client": "3f7c6bad-83e1-4156-9047-474481208a93",
+        "restaurant": "ALMUERZO Comida",
+        "latitud": -34.567796,
+        "longitud": -58.40666,
+        "duration": 0.0
+    },
+    {
+        "client": "c4792628-f376-4490-8d7c-0bf6b38c0728",
+        "restaurant": "ALMUERZO Comida",
+        "latitud": -34.567796,
+        "longitud": -58.40666,
+        "duration": 0.0
+    },
+    {
+        "client": "a1a9bcfd-a216-48ce-a2be-a41ab7c6e264",
+        "restaurant": "sede Oriente",
+        "latitud": -34.649166,
+        "longitud": -58.421466,
+        "duration": 0.0
+    },
+    {
+        "client": "309d1d19-356d-4b0d-9c25-e4ccd38c01f5",
+        "restaurant": "sede Oriente",
+        "latitud": -34.649166,
+        "longitud": -58.421466,
+        "duration": 0.0
+    },
+    {
+        "client": "62b7022e-4bdb-4223-8837-fa97e2c3cf70",
+        "restaurant": "CASA Occidente, 'Patroclo",
+        "latitud": -34.594167,
+        "longitud": -58.384661,
+        "duration": 0.0
+    },
+    {
+        "client": "889093ed-c188-4629-a5ab-b57b98fb19d5",
+        "restaurant": "CASA Occidente, 'Patroclo",
+        "latitud": -34.594167,
+        "longitud": -58.384661,
+        "duration": 0.0
+    },
+    {
+        "client": "147ada4d-b8fd-44b8-afa0-0db82a6f95ef",
+        "restaurant": "CASA Occidente, 'Patroclo",
+        "latitud": -34.594167,
+        "longitud": -58.384661,
+        "duration": 0.0
+    },
+    {
+        "client": "39b40140-2a1e-40e1-8f95-70454983bb3e",
+        "restaurant": "CASA Occidente, 'Patroclo",
+        "latitud": -34.594167,
+        "longitud": -58.384661,
+        "duration": 0.0
+    },
+    {
+        "client": "d464bfcb-4801-43c3-a52c-69569639a9f6",
+        "restaurant": "CASA Occidente, 'Patroclo",
+        "latitud": -34.594167,
+        "longitud": -58.384661,
+        "duration": 0.0
+    },
+    {
+        "client": "3e9f87d0-af28-4898-b67e-eb073295a67e",
+        "restaurant": "CASA Occidente, 'Patroclo",
+        "latitud": -34.594167,
+        "longitud": -58.384661,
+        "duration": 0.0
+    },
+    {
+        "client": "ded0fc1f-ac14-44c2-b712-4c83c3492b80",
+        "restaurant": "CASA Occidente, 'Patroclo",
+        "latitud": -34.594167,
+        "longitud": -58.384661,
+        "duration": 0.0
+    },
+    {
+        "client": "5e765fad-ec53-4803-a9ee-c809492a4ab0",
+        "restaurant": "ALMUERZO Occidente, 'Patroclo",
+        "latitud": -34.585706,
+        "longitud": -58.335106,
+        "duration": 0.0
+    },
+    {
+        "client": "653ffc49-d302-42e8-8c99-cefc68f7bb55",
+        "restaurant": "ALMUERZO Occidente, 'Patroclo",
+        "latitud": -34.585706,
+        "longitud": -58.335106,
+        "duration": 0.0
+    },
+    {
+        "client": "af1f5a25-1a37-457e-8294-84e2ef022e5e",
+        "restaurant": "CASA Comida",
+        "latitud": -34.592598,
+        "longitud": -58.419828,
+        "duration": 0.0
+    },
+    {
+        "client": "60abf8f2-981a-45a5-a804-a9beb145d1d9",
+        "restaurant": "CASA Oriente",
+        "latitud": -34.578291,
+        "longitud": -58.349389,
+        "duration": 0.0
+    },
+    {
+        "client": "7d88a3e9-51a7-48fb-9e4b-080b0fd393fe",
+        "restaurant": "Andre Norte",
+        "latitud": -34.588471,
+        "longitud": -58.352416,
+        "duration": 0.0
+    },
+    {
+        "client": "f41ec899-bdf4-41c4-9837-bb5c8395739d",
+        "restaurant": "Andre Norte",
+        "latitud": -34.588471,
+        "longitud": -58.352416,
+        "duration": 0.0
+    },
+    {
+        "client": "200cc19f-a2ba-41ce-8562-8760c6b133ad",
+        "restaurant": "Andre Norte",
+        "latitud": -34.588471,
+        "longitud": -58.352416,
+        "duration": 0.0
+    },
+    {
+        "client": "16d9355f-8aaa-41ba-bc45-582751d5eefc",
+        "restaurant": "Andre Norte",
+        "latitud": -34.588471,
+        "longitud": -58.352416,
+        "duration": 0.0
+    },
+    {
+        "client": "2b2638bf-21c9-4d82-969e-d462635ed74b",
+        "restaurant": "ALMUERZO Central",
+        "latitud": -34.59375,
+        "longitud": -58.377716,
+        "duration": 0.0
+    },
+    {
+        "client": "7b6fe0cd-5645-47c6-8ade-6d5a5835d1ee",
+        "restaurant": "EDIFICIO Comida",
+        "latitud": -34.640333,
+        "longitud": -58.377988,
+        "duration": 0.0
+    },
+    {
+        "client": "93c446b7-7ecc-4bb3-8d24-36c730a749bc",
+        "restaurant": "EDIFICIO Comida",
+        "latitud": -34.640333,
+        "longitud": -58.377988,
+        "duration": 0.0
+    },
+    {
+        "client": "7140e8f9-f46e-4081-bfaa-3509682c326f",
+        "restaurant": "CASA Norte",
+        "latitud": -34.651065,
+        "longitud": -58.378303,
+        "duration": 0.0
+    },
+    {
+        "client": "5652567b-8a46-4acb-822e-56c83e3a82b0",
+        "restaurant": "CASA Norte",
+        "latitud": -34.651065,
+        "longitud": -58.378303,
+        "duration": 0.0
+    },
+    {
+        "client": "5808d931-2e8c-4ebc-9867-60289be61198",
+        "restaurant": "CASA Norte",
+        "latitud": -34.651065,
+        "longitud": -58.378303,
+        "duration": 0.0
+    },
+    {
+        "client": "875fd9bd-9f83-4ab0-9cb4-30cfb98669dd",
+        "restaurant": "CASA Norte",
+        "latitud": -34.651065,
+        "longitud": -58.378303,
+        "duration": 0.0
+    },
+    {
+        "client": "3422982f-c041-4075-ad3f-2a6727dae3de",
+        "restaurant": "CASA Norte",
+        "latitud": -34.651065,
+        "longitud": -58.378303,
+        "duration": 0.0
+    },
+    {
+        "client": "075d5cb8-88dd-4817-95b2-ff06c8c4047c",
+        "restaurant": "CASA Norte",
+        "latitud": -34.651065,
+        "longitud": -58.378303,
+        "duration": 0.0
+    },
+    {
+        "client": "9faad365-4a61-446f-918e-32654d79ac1b",
+        "restaurant": "CASA Norte",
+        "latitud": -34.651065,
+        "longitud": -58.378303,
+        "duration": 0.0
+    },
+    {
+        "client": "1d7031a9-7968-4c2b-a063-04ae4c58c3d3",
+        "restaurant": "CASA Norte",
+        "latitud": -34.651065,
+        "longitud": -58.378303,
+        "duration": 0.0
+    },
+    {
+        "client": "35a94c71-5a63-465e-9495-1a40dc5986aa",
+        "restaurant": "CASA Norte",
+        "latitud": -34.651065,
+        "longitud": -58.378303,
+        "duration": 0.0
+    },
+    {
+        "client": "fcc0a979-56fe-4749-b37f-4a12a9d6409d",
+        "restaurant": "CASA Norte",
+        "latitud": -34.651065,
+        "longitud": -58.378303,
+        "duration": 0.0
+    },
+    {
+        "client": "b46639bc-980c-4d17-82d9-266b6ee864e8",
+        "restaurant": "CASA Norte",
+        "latitud": -34.651065,
+        "longitud": -58.378303,
+        "duration": 0.0
+    },
+    {
+        "client": "29178dff-ff39-457e-84c0-b7396876e5ea",
+        "restaurant": "CASA Norte",
+        "latitud": -34.651065,
+        "longitud": -58.378303,
+        "duration": 0.0
+    },
+    {
+        "client": "a79b18d7-f885-4929-86f2-1eba857c6222",
+        "restaurant": "CASA Norte",
+        "latitud": -34.651065,
+        "longitud": -58.378303,
+        "duration": 0.0
+    },
+    {
+        "client": "39110629-46fa-4693-b494-08007727cf4c",
+        "restaurant": "CASA Norte",
+        "latitud": -34.651065,
+        "longitud": -58.378303,
+        "duration": 0.0
+    },
+    {
+        "client": "ef6b82e2-ee99-46ab-9eda-05f95e75fc83",
+        "restaurant": "CASA Norte",
+        "latitud": -34.651065,
+        "longitud": -58.378303,
+        "duration": 0.0
+    },
+    {
+        "client": "446e50fa-cf41-4380-9bcf-c5f31b004eb7",
+        "restaurant": "CASA Sur",
+        "latitud": -34.632404,
+        "longitud": -58.375874,
+        "duration": 0.0
+    },
+    {
+        "client": "7a0195e6-ec94-4a09-b69a-d33ae25d3259",
+        "restaurant": "Andre Sur",
+        "latitud": -34.633918,
+        "longitud": -58.361872,
+        "duration": 0.0
+    },
+    {
+        "client": "7ae06da9-9911-4539-999e-28a8838f9808",
+        "restaurant": "Andre Sur",
+        "latitud": -34.633918,
+        "longitud": -58.361872,
+        "duration": 0.0
+    },
+    {
+        "client": "a58eb1af-68a3-4e0f-a4d1-69c9bc9ba058",
+        "restaurant": "Andre Sur",
+        "latitud": -34.633918,
+        "longitud": -58.361872,
+        "duration": 0.0
+    },
+    {
+        "client": "446f1e15-0ce4-4087-8575-651dcd07d3d4",
+        "restaurant": "Andre Sur",
+        "latitud": -34.633918,
+        "longitud": -58.361872,
+        "duration": 0.0
+    },
+    {
+        "client": "90af7878-d04c-4b16-9af3-22e03f4edc66",
+        "restaurant": "EDIFICIO Oriente",
+        "latitud": -34.586285,
+        "longitud": -58.413647,
+        "duration": 0.0
+    },
+    {
+        "client": "7ffd81ae-e7ed-4447-b44f-0d3e9204cb31",
+        "restaurant": "Andre Comida",
+        "latitud": -34.589973,
+        "longitud": -58.402966,
+        "duration": 0.0
+    },
+    {
+        "client": "1c5f6ba3-b337-412d-87ea-ff1e2c765a2f",
+        "restaurant": "Andre Comida",
+        "latitud": -34.589973,
+        "longitud": -58.402966,
+        "duration": 0.0
+    },
+    {
+        "client": "6cdb2aeb-dd2d-47a2-907e-6b086c1c5f96",
+        "restaurant": "Andre Comida",
+        "latitud": -34.589973,
+        "longitud": -58.402966,
+        "duration": 0.0
+    },
+    {
+        "client": "1bbf25c0-23b5-4b56-ab62-7a4a0de9b3bd",
+        "restaurant": "Andre Comida",
+        "latitud": -34.589973,
+        "longitud": -58.402966,
+        "duration": 0.0
+    },
+    {
+        "client": "686c0442-06e8-4343-9ec7-c55541e9b49e",
+        "restaurant": "Andre Comida",
+        "latitud": -34.589973,
+        "longitud": -58.402966,
+        "duration": 0.0
+    },
+    {
+        "client": "2de3e9b4-1637-4bb9-b92a-898c34b1994c",
+        "restaurant": "Andre Comida",
+        "latitud": -34.589973,
+        "longitud": -58.402966,
+        "duration": 0.0
+    },
+    {
+        "client": "56cab643-29ac-40a0-9544-fc8ccdaaa2b6",
+        "restaurant": "RESTAURANTE Sur",
+        "latitud": -34.64746,
+        "longitud": -58.38596,
+        "duration": 0.0
+    },
+    {
+        "client": "f1aff988-5187-4881-b7d1-4ecf4ae1c2c8",
+        "restaurant": "RESTAURANTE Sur",
+        "latitud": -34.64746,
+        "longitud": -58.38596,
+        "duration": 0.0
+    },
+    {
+        "client": "bd7014ea-8d14-4211-892a-ac0220bfec7d",
+        "restaurant": "RESTAURANTE Sur",
+        "latitud": -34.64746,
+        "longitud": -58.38596,
+        "duration": 0.0
+    },
+    {
+        "client": "58324b93-8302-47e5-906b-58193ef3542d",
+        "restaurant": "CASA Norte",
+        "latitud": -34.651065,
+        "longitud": -58.378303,
+        "duration": 0.0
+    },
+    {
+        "client": "dcc4434f-b1fe-4555-bdf0-1792f8f7666d",
+        "restaurant": "CASA Sur",
+        "latitud": -34.632404,
+        "longitud": -58.375874,
+        "duration": 0.0
+    },
+    {
+        "client": "ea65bdf9-6721-43df-845f-2a79e29bdb4f",
+        "restaurant": "Andre Sur",
+        "latitud": -34.633918,
+        "longitud": -58.361872,
+        "duration": 0.0
+    },
+    {
+        "client": "ad967c6f-e0bf-4664-97c2-f98d14527ddd",
+        "restaurant": "Andre Sur",
+        "latitud": -34.633918,
+        "longitud": -58.361872,
+        "duration": 0.0
+    },
+    {
+        "client": "6651ac8c-eb6f-4114-b742-a125ea4929f5",
+        "restaurant": "Andre Sur",
+        "latitud": -34.633918,
+        "longitud": -58.361872,
+        "duration": 0.0
+    },
+    {
+        "client": "3d6a811b-92b8-4b36-b027-fc1abc4da24e",
+        "restaurant": "Andre Sur",
+        "latitud": -34.633918,
+        "longitud": -58.361872,
+        "duration": 0.0
+    },
+    {
+        "client": "d1c3640d-a6fa-4012-8a86-11b7a7fde1ee",
+        "restaurant": "EDIFICIO Oriente",
+        "latitud": -34.586285,
+        "longitud": -58.413647,
+        "duration": 0.0
+    },
+    {
+        "client": "707137dc-696a-466b-b973-3294c90057b1",
+        "restaurant": "EDIFICIO Oriente",
+        "latitud": -34.586285,
+        "longitud": -58.413647,
+        "duration": 0.0
+    },
+    {
+        "client": "93b34624-869a-4c83-aa51-cb111683ee00",
+        "restaurant": "Andre Comida",
+        "latitud": -34.589973,
+        "longitud": -58.402966,
+        "duration": 0.0
+    },
+    {
+        "client": "92a1d7e1-1c5b-4b41-bd62-a7a1b0dd3a18",
+        "restaurant": "Andre Comida",
+        "latitud": -34.589973,
+        "longitud": -58.402966,
+        "duration": 0.0
+    },
+    {
+        "client": "2dd7446f-ce2c-4c13-9877-d41e8ed9a1ec",
+        "restaurant": "Andre Comida",
+        "latitud": -34.589973,
+        "longitud": -58.402966,
+        "duration": 0.0
+    },
+    {
+        "client": "0ffef205-8093-4a2e-98ab-4ba79bca4993",
+        "restaurant": "Andre Comida",
+        "latitud": -34.589973,
+        "longitud": -58.402966,
+        "duration": 0.0
+    },
+    {
+        "client": "688ee973-31d1-4514-a421-8749ef9ebc9e",
+        "restaurant": "Andre Comida",
+        "latitud": -34.589973,
+        "longitud": -58.402966,
+        "duration": 0.0
+    },
+    {
+        "client": "e940ddb1-fa37-422a-93a8-e3af124e0e00",
+        "restaurant": "Andre Comida",
+        "latitud": -34.589973,
+        "longitud": -58.402966,
+        "duration": 0.0
+    },
+    {
+        "client": "17397498-de00-4f43-835e-469014339517",
+        "restaurant": "Andre Comida",
+        "latitud": -34.589973,
+        "longitud": -58.402966,
+        "duration": 0.0
+    },
+    {
+        "client": "c1cc012b-584d-4570-80de-36215a41e55c",
+        "restaurant": "RESTAURANTE Sur",
+        "latitud": -34.64746,
+        "longitud": -58.38596,
+        "duration": 0.0
+    },
+    {
+        "client": "7cbce214-a8f2-49ed-bb43-27eb69dbe849",
+        "restaurant": "RESTAURANTE Sur",
+        "latitud": -34.64746,
+        "longitud": -58.38596,
+        "duration": 0.0
+    },
+    {
+        "client": "01c0d83d-5659-4ec2-81d5-9e99d06ea026",
+        "restaurant": "RESTAURANTE Sur",
+        "latitud": -34.64746,
+        "longitud": -58.38596,
+        "duration": 0.0
+    }
+]
